@@ -1,0 +1,25 @@
+{
+  "synthetic_only": true,
+  "result_path": "output/cad-etrd36eb/cad_result.json",
+  "status": "ok",
+  "outer_bounds": {
+    "min_mm": [
+      -12.0,
+      -12.0,
+      -7.0
+    ],
+    "max_mm": [
+      76.0,
+      52.0,
+      11.6
+    ]
+  },
+  "checks": 21,
+  "check_status_counts": {
+    "pass": 17,
+    "fail": 0,
+    "not_checked": 4
+  },
+  "test_command": "PYTHONPATH=src /tmp/justbuild-cad-venv/bin/python -m pytest tests/cad -q -p no:cacheprovider --basetemp=/tmp/justbuild-cad-pytest-final",
+  "tests": "35 passed in 14.00s"
+}

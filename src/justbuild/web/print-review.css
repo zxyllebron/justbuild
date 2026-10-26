@@ -1,0 +1,39 @@
+.print-review-dialog { width:min(570px,calc(100vw - 28px)); max-height:calc(100dvh - 36px); padding:0; border:1px solid #dce8e2; border-radius:16px; background:#fff; color:#243c49; box-shadow:0 24px 90px #142c3c3d; overflow:auto; }
+.print-review-dialog::backdrop { background:#12283380; backdrop-filter:blur(3px); }
+.print-review-header { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; padding:24px 25px 0; }
+.print-review-eyebrow { color:#1c8068; font-size:10px; font-weight:650; letter-spacing:.09em; }
+.print-review-header h2 { margin:5px 0 0; font-size:20px; font-weight:650; letter-spacing:-.4px; }
+.print-review-close { border:0; background:transparent; color:#83948e; font-size:23px; padding:1px 5px; line-height:1; }
+.print-review-status { margin:14px 25px 0; color:#71877d; font-size:11px; line-height:1.8; white-space:pre-wrap; overflow-wrap:anywhere; }
+.print-review-status[data-tone=warning] { color:#9b713d; }
+.print-review-body { padding:18px 25px 22px; }
+.print-review-identity { display:flex; flex-direction:column; gap:6px; padding:14px; border-radius:10px; background:#f1f7f3; }
+.print-review-identity strong { font-size:14px; font-weight:600; }
+.print-review-identity>span { font-size:10px; color:#7b8e82; overflow-wrap:anywhere; }
+.print-review-settings,.print-review-bindings { display:grid; grid-template-columns:minmax(110px,1fr) minmax(0,1.5fr); gap:9px 16px; margin:18px 0; font-size:11px; line-height:1.6; }
+.print-review-settings dt,.print-review-bindings dt { color:#89988f; }
+.print-review-settings dd,.print-review-bindings dd { margin:0; text-align:right; min-width:0; overflow-wrap:anywhere; }
+.print-review-file { display:flex; flex-direction:column; gap:7px; padding:14px 0; border-top:1px solid #e7eee9; border-bottom:1px solid #e7eee9; }
+.print-review-file>span,.print-review-file>small { font-size:10px; color:#86988b; }
+.print-review-hash { font:10px/1.8 ui-monospace,SFMono-Regular,Consolas,monospace; color:#5f7a6a; overflow-wrap:anywhere; word-break:break-all; }
+.print-review-details { margin:14px 0 0; }
+.print-review-details>summary { cursor:pointer; color:#7c9183; font-size:10px; }
+.print-review-bindings { font-size:10px; margin:13px 0; }
+.print-review-bindings dt { overflow-wrap:anywhere; }
+.print-review-risks { margin-top:22px; }
+.print-review-risks h3 { margin:0 0 10px; font-size:12px; font-weight:550; color:#776441; }
+.print-review-risks ul { padding:0 0 0 17px; margin:0; max-height:190px; overflow:auto; scrollbar-width:thin; color:#8d7e62; }
+.print-review-risks li { margin:0 0 11px; font-size:10px; line-height:1.8; overflow-wrap:anywhere; }
+.print-review-risks li b { display:block; font-size:11px; color:#8e784f; font-weight:500; }
+.print-review-risks li span { display:block; }
+.print-review-consent { display:flex; align-items:flex-start; gap:9px; padding:14px 12px; margin-top:20px; background:#f5f8f5; border-radius:8px; color:#60786a; font-size:11px; line-height:1.8; cursor:pointer; }
+.print-review-consent input { margin:4px 0 0; accent-color:#157663; flex-shrink:0; }
+.print-review-actions { position:sticky; bottom:0; display:flex; justify-content:flex-end; gap:9px; background:#fff; border-top:1px solid #edf1ee; padding:14px 25px; }
+.print-review-actions button { font-size:11px; border-radius:8px; padding:10px 14px; }
+.print-review-start,.print-review-setup { background:#157663; color:#fff; border:1px solid #157663; }
+.print-review-start:hover { background:#106953; color:#fff; }
+.print-review-start:disabled { opacity:.4; }
+.print-review-setup { display:inline-block; padding:10px 15px; border-radius:8px; font-size:11px; text-decoration:none; margin-top:8px; }
+.print-review-description { font-size:11px; color:#8b9387; line-height:1.8; white-space:pre-wrap; overflow-wrap:anywhere; }
+.print-review-receipt-state { padding:18px 16px; background:#f1f7f3; border-radius:10px; color:#237b63; font-size:15px; font-weight:550; }
+@media(max-width:480px) { .print-review-dialog { width:calc(100vw - 18px); max-height:calc(100dvh - 22px); border-radius:12px; }.print-review-header { padding:19px 17px 0; }.print-review-status { margin:12px 17px 0; }.print-review-body { padding:15px 17px 18px; }.print-review-actions { padding:12px 17px; flex-wrap:wrap; }.print-review-actions button { padding:10px 12px; }.print-review-settings,.print-review-bindings { grid-template-columns:minmax(85px,1fr) minmax(0,1.5fr); gap:8px 10px; }.print-review-header h2 { font-size:18px; } }

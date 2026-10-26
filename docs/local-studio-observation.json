@@ -1,0 +1,18 @@
+{
+  "observed_at": "2026-10-24T09:00:23.911976+00:00",
+  "installed_linux_executable": "/home/wujie/.local/opt/bambu-studio-2.8.2.61/squashfs-root/bin/bambu-studio",
+  "desktop_entry": "/home/wujie/.local/share/applications/BambuStudio.desktop",
+  "file_associations_observed": [
+    "model/3mf",
+    "application/vnd.ms-3mfdocument",
+    "x-scheme-handler/bambustudio",
+    "x-scheme-handler/bambustudioopen"
+  ],
+  "running_application_instances": 2,
+  "each_instance_argument_basename": "justbuild-a1-demo-enclosure.gcode.3mf",
+  "custom_protocol_argument_observed": false,
+  "interpretation": "Process arguments are consistent with opening the downloaded 3MF through the registered desktop file association. They do not identify which human click initiated it, and do not prove print dispatch.",
+  "agent_started_desktop_app_in_this_turn": false,
+  "printer_command_sent": false,
+  "cad_desktop_installed_in_this_turn": false
+}

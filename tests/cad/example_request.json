@@ -1,0 +1,63 @@
+{
+  "schema_version": "0.1",
+  "job_id": "cad-synthetic-60x40",
+  "board": {
+    "step_path": "synthetic_board.step",
+    "units": "mm",
+    "metadata": {
+      "pcb_solid_index": 0,
+      "pcb_selection_source": "tests/cad/synthetic_fixture.py: explicit synthetic PCB, not a real board measurement"
+    }
+  },
+  "constraints": {
+    "confirmed": true,
+    "structure": "single_pcb_screw_lid",
+    "board_frame": {
+      "origin_mm": [0, 0, 0],
+      "x_axis": [1, 0, 0],
+      "y_axis": [0, 1, 0],
+      "z_axis": [0, 0, 1]
+    },
+    "feature_review": {
+      "mounting_holes_complete": true,
+      "ports_complete": true,
+      "keepouts_complete": true,
+      "source": "Synthetic fixture definition only; this is not user confirmation for any actual board"
+    },
+    "mounting_holes": [
+      {"id": "h1", "reference": "pcb", "center_mm": [5, 5, 0.8], "axis": [0, 0, 1], "diameter_mm": 3.2, "source": "synthetic fixture"},
+      {"id": "h2", "reference": "pcb", "center_mm": [55, 5, 0.8], "axis": [0, 0, 1], "diameter_mm": 3.2, "source": "synthetic fixture"},
+      {"id": "h3", "reference": "pcb", "center_mm": [5, 35, 0.8], "axis": [0, 0, 1], "diameter_mm": 3.2, "source": "synthetic fixture"},
+      {"id": "h4", "reference": "pcb", "center_mm": [55, 35, 0.8], "axis": [0, 0, 1], "diameter_mm": 3.2, "source": "synthetic fixture"}
+    ],
+    "ports": [
+      {
+        "id": "synthetic_connector", "access": "external", "shape": "rectangle", "face": "x_max",
+        "center_mm": [64, 20, 4.1], "width_mm": 12, "height_mm": 7,
+        "insertion_direction": [-1, 0, 0], "source": "Synthetic cuboid connector; no actual USB standard or plug claim",
+        "service_envelope": {"min_mm": [64, 15, 1.6], "max_mm": [100, 25, 6.6], "source": "Synthetic straight plug box"}
+      },
+      {
+        "id": "synthetic_service", "access": "maintenance", "shape": "circle", "face": "z_max",
+        "center_mm": [30, 20, 1.6], "diameter_mm": 10, "insertion_direction": [0, 0, -1],
+        "source": "Synthetic tool access above bare PCB surface",
+        "service_envelope": {"min_mm": [28, 18, 1.6], "max_mm": [32, 22, 30], "source": "Synthetic straight tool envelope"}
+      },
+      {"id": "internal_header", "access": "internal", "source": "Synthetic explicit no external access requirement"},
+      {"id": "covered_header", "access": "covered", "source": "Synthetic explicit covered access requirement"}
+    ],
+    "keepouts": [
+      {"id": "cable_keepout", "shape": "box", "purpose": "no_material", "min_mm": [15, -30, 1], "max_mm": [25, -1, 4], "source": "Synthetic cable travel volume"}
+    ],
+    "manufacturing": {
+      "material_id": "synthetic-PLA-unqualified", "source": "Synthetic test dimensions, not calibrated or hardware-qualified values",
+      "wall_thickness_mm": 2, "base_thickness_mm": 2, "lid_thickness_mm": 3,
+      "clearance_xy_mm": 1, "clearance_top_mm": 2, "clearance_bottom_mm": 1,
+      "standoff_height_mm": 5, "geometry_tolerance_mm": 0.001,
+      "boolean_volume_tolerance_mm3": 0.0000001,
+      "mesh_linear_tolerance_mm": 0.05, "mesh_angular_tolerance_rad": 0.1,
+      "pcb_mount": {"type": "self_tapping_blind_pilot", "screw_id": "synthetic-self-tapper", "post_diameter_mm": 8, "pilot_diameter_mm": 2.5, "pilot_depth_mm": 4, "clearance_diameter_mm": 3},
+      "lid_fastener": {"type": "self_tapping_blind_pilot", "screw_id": "synthetic-lid-self-tapper", "post_diameter_mm": 9, "pilot_diameter_mm": 2.6, "pilot_depth_mm": 6, "clearance_diameter_mm": 3.2, "head_diameter_mm": 6.2, "head_depth_mm": 1.4}
+    }
+  }
+}

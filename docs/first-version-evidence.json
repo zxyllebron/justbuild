@@ -1,0 +1,79 @@
+{
+  "version": "0.1.0",
+  "date": "2026-10-24",
+  "timezone": "Asia/Shanghai",
+  "input_kind": "explicitly synthetic PCB; not measured from the V821 image",
+  "reference_job_id": "a220edffbf6a4c8eaa813616761bf1a7",
+  "review_url": "http://127.0.0.1:18765/?job=a220edffbf6a4c8eaa813616761bf1a7",
+  "state": "ready_to_print",
+  "tests": {
+    "result": "143 passed, 1 deprecation warning",
+    "duration_seconds": 26.94,
+    "includes_real_slicer": true
+  },
+  "geometry": {
+    "verdict": "pass",
+    "counts": {
+      "pass": 36,
+      "fail": 0,
+      "not_checked": 6,
+      "not_applicable": 2
+    },
+    "not_checked": [
+      "cable_bend",
+      "nonlinear_assembly",
+      "rf",
+      "strength",
+      "thermal",
+      "wall_thickness"
+    ],
+    "cad_result": "generating/cad-a3n8glgv/cad_result.json",
+    "verification_result": "verifying/verification.json"
+  },
+  "slicing": {
+    "simulation": false,
+    "path": "data/jobs/a220edffbf6a4c8eaa813616761bf1a7/slicing/prepare-945d47f599474f89ac97f3b8616c6b70/slicer/enclosure.gcode.3mf",
+    "size_bytes": 510514,
+    "sha256": "f178cba3379e7b9dd3e6be9b15f2225cd60f3c7590cf2745855462a42fc8e1bc",
+    "zip_crc_error": null,
+    "gcode_members_bytes": {
+      "Metadata/plate_1.gcode": 2164446
+    },
+    "printer_model": "Bambu Lab A1",
+    "nozzle_diameter": [
+      "0.4"
+    ],
+    "filament_type": [
+      "PLA"
+    ]
+  },
+  "browser": {
+    "implemented": [
+      "rotation",
+      "transparent shell",
+      "section plane",
+      "exploded lid",
+      "artifact downloads",
+      "check evidence",
+      "PCB versus lid hole annotations",
+      "hole view",
+      "STEP/base axis offset evidence table"
+    ],
+    "software_fallback": "actual GLB mesh projected in Canvas2D when WebGL creation fails; rendering is not geometry validation"
+  },
+  "not_verified": [
+    "A1 cloud upload/receipt/start/completion",
+    "physical fit and fastener qualification",
+    "production public multi-user deployment",
+    "real model-provider calls",
+    "automatic geometry repair execution",
+    "Docker image build"
+  ],
+  "service": {
+    "unit": "justbuild-v01.service",
+    "active_state": "active",
+    "sub_state": "running",
+    "scope": "transient user service; loopback only; not enabled for boot"
+  },
+  "follow_up_evidence": "docs/current-print-and-hole-review.json"
+}

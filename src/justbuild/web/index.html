@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>justbuild · 外壳设计</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/dimension-review.css">
+  <link rel="stylesheet" href="/static/print-review.css">
+  <script type="importmap">{"imports":{"three":"/static/vendor/three.module.js"}}</script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="/">just<span>build</span></a><div class="topright"><span id="health">连接中</span><a id="connectprinter" href="/printer-setup" hidden>连接 A1</a><button id="projects" aria-expanded="false" aria-controls="projectpanel">项目</button></div></header>
+  <main>
+    <aside id="projectpanel" class="sidebar" hidden>
+      <div class="panel-title"><h3>项目</h3><button id="closeprojects" aria-label="关闭项目面板">×</button></div>
+      <label class="upload" for="step"><strong>＋ 导入 STEP 板卡</strong><span>STEP / STP · 最大 100 MiB</span></label><input id="step" type="file" accept=".step,.stp" hidden>
+      <div class="sidebar-title">最近任务 <span id="jobcount">0</span></div><div id="jobs" class="jobs"></div>
+      <button id="demo" class="secondary">运行合成示例</button><a class="api-link" href="/docs" target="_blank">开发者 API ↗</a>
+    </aside>
+    <section class="workspace">
+      <div class="heading"><h1 id="jobtitle">外壳与板卡</h1><div id="state" class="badge neutral">等待导入</div></div>
+      <section id="viewer" class="viewer" aria-label="三维设计审阅">
+        <div class="viewer-toolbar"><div class="views"><button id="home" class="active">装配</button><button id="exploded">爆炸</button><button id="holeview">孔位</button><button id="screenview" hidden>屏幕面</button></div><div class="viewer-options"><button id="measure" aria-pressed="false">测量</button><label><input type="checkbox" id="transparent" checked> 透明</label><label><input type="checkbox" id="section"> 剖切</label><input type="range" id="cut" min="0" max="100" value="50" aria-label="剖切位置" disabled><button id="fit" title="适配完整模型" aria-label="适配完整模型">适配</button><button id="expandview">放大</button></div></div>
+        <div id="dimensionmodes" class="dimension-modes" hidden><span>尺寸 · mm</span><button data-dimension-mode="shell" class="active">外壳</button><button data-dimension-mode="board">板卡</button><button data-dimension-mode="holes">安装孔</button><button data-dimension-mode="feature" id="featuredimension" hidden>当前开口</button></div>
+        <div id="viewport"><div id="modelstatus" class="model-status" role="status">等待模型</div><button id="exitview" class="exit-view" hidden>收起 · Esc</button><div id="empty"><div class="empty-symbol">◇</div><strong>导入板卡，开始设计</strong><span>STEP 文件与需求 → 外壳 → 检查 → 打印</span><button id="emptyimport">导入 STEP</button></div><div id="holelabels" class="hole-labels"></div><div id="dimensionoverlay" class="dimension-overlay" hidden></div><div class="canvas-meta"><span id="dimensions">mm</span><span id="accessorydimensions"></span><span>拖动旋转 · 滚轮缩放</span></div></div>
+      </section>
+      <div class="review-line"><span id="reviewsummary">等待检查</span><label><input type="checkbox" id="holes" checked> 孔位标注</label><span id="synthetic" class="small-tag">尚未运行</span></div>
+      <details class="fold context"><summary>设计说明<span>来源与装配限制</span></summary><p id="notice" class="notice">导入板卡 STEP，确认接口与安装要求后生成外壳。</p></details>
+      <details class="fold" id="functionfold" hidden><summary>接口与开口<span id="featurecount"></span></summary><section id="functionalreview" class="functional-review" hidden></section></details>
+      <details class="fold" id="riskfold"><summary>检查与风险<span id="riskcount">尚无报告</span></summary><div class="panel"><div class="panel-title"><div id="counts" class="counts"></div><a id="report" hidden target="_blank">完整报告 ↗</a></div><div class="checkfilters"><button data-filter="all" class="active">全部</button><button data-filter="fail">问题</button><button data-filter="not_checked">未检查</button></div><div id="checks" class="checks"><p class="muted">检查方法、测量与限制会显示在这里。</p></div></div></details>
+      <details class="fold hole-review"><summary>孔位与 STEP 对照<span id="holesummary">PCB 固定孔与锁盖孔</span></summary><div id="holetable"></div></details>
+      <details class="fold" id="filesfold"><summary>文件与打印<span>STEP · STL · 3MF</span></summary><section class="panel"><div id="pipeline" class="pipeline"></div><div id="downloads" class="downloads"></div><div class="print-actions"><button id="print" disabled>发送到 A1</button><span id="printnote">尚未连接打印机</span></div></section></details>
+      <section id="proposal" class="panel proposal" hidden><div class="panel-title"><h3>确认设计约束</h3><span class="small-tag">一次确认后自动设计</span></div><p>核对 PCB、安装孔、接口用途与操作空间。</p><div id="inventory"></div><details><summary>完整机械约束</summary><textarea id="request" spellcheck="false" aria-label="机械约束 JSON"></textarea></details><div id="scope-review"><label class="confirm-label"><input type="checkbox" data-scope="mounting_holes">已核对全部板孔及固定用途</label><label class="confirm-label"><input type="checkbox" data-scope="ports">已核对按钮、接口与接线清单</label><label class="confirm-label"><input type="checkbox" data-scope="keepouts">已核对维护、走线和避让空间</label></div><label class="confirm-label"><input id="reviewed" type="checkbox">确认具体约束与制造参数，开始生成。</label><button id="confirm" class="primary" disabled>确认并生成</button></section>
+      <footer>mm · 尺寸来自设计几何；实物配合与未检查项目以报告为准。</footer>
+    </section>
+  </main>
+  <div id="toast" role="status"></div>
+  <script type="module" src="/static/app.js?v=compact-screen-20261026-r3"></script>
+</body></html>

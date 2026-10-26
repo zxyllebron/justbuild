@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>连接本机 A1 · justbuild</title><link rel="stylesheet" href="/printer-setup.css"></head>
+<body><main>
+<a class="back" href="/">← 返回设计审阅</a>
+<header><p class="eyebrow">JUSTBUILD · 本机首次配对</p><h1>连接你的 Bambu Lab A1</h1>
+<p>打印机与运行 justbuild 的电脑需要暂时位于同一热点或局域网。配对资料只保存到运行服务的电脑，不发送到模型或分享链接。</p></header>
+<section class="notice"><strong>准备好打印机屏幕上的资料</strong>
+<p>在打印机设置中找到网络 IP、设备序列号、固件版本和 8 位 LAN 访问码。根据设备固件菜单，手动确认 Developer LAN 已允许；本程序不会更改设备模式。</p>
+<p>这是当前现场 LAN 验证入口。跨网络云端打印仍需云适配器；本页配对成功不会表示已发印。</p></section>
+<form id="pair-form" autocomplete="off">
+<div class="fields">
+<label>打印机 IP<input id="host" name="host" type="text" inputmode="decimal" placeholder="例如 172.20.10.2" required maxlength="15" autocomplete="off"></label>
+<label>打印机序列号 SN<input id="serial" name="serial" type="text" required minlength="6" maxlength="64" pattern="[A-Za-z0-9_-]{6,64}" autocomplete="off" spellcheck="false"></label>
+<label>LAN 访问码<input id="access-code" name="access-code" type="password" required minlength="8" maxlength="8" pattern="[A-Za-z0-9]{8}" autocomplete="new-password" spellcheck="false"><small>隐藏输入，8 位字母或数字。不要在聊天或截图中发送。</small></label>
+<label>固件版本<input id="firmware" name="firmware" type="text" required maxlength="64" placeholder="按打印机屏幕填写" autocomplete="off" spellcheck="false"></label>
+</div>
+<label class="check"><input id="developer-confirmed" type="checkbox" required><span>我已在这台打印机上允许 Developer LAN，并确认上述 IP、SN 和固件属于目标 A1。</span></label>
+<button id="probe" type="submit">读取设备证书</button>
+</form>
+<section id="fingerprints" hidden>
+<h2>核对目标设备，固定本次证书</h2>
+<p class="warning">首次读取的自签名 TLS 证书尚未验证设备身份。请对照打印机屏幕的 IP、SN，并在可信本地网络核对；如果没有独立可信证书来源，这一步属于首次信任，不能证明厂商身份。</p>
+<dl><dt>目标 IP</dt><dd id="observed-host"></dd><dt>MQTT · 8883 · SHA-256</dt><dd><code id="mqtt-pin"></code></dd><dt>FTPS · 990 · SHA-256</dt><dd><code id="ftp-pin"></code></dd></dl>
+<p>本次探测 5 分钟有效；今后证书变化会拒绝发送凭据，需重新配对。</p>
+<label class="check"><input id="fingerprint-confirmed" type="checkbox"><span>我已核对目标设备，并同意信任、固定这两个证书指纹。</span></label>
+<button id="pair" type="button" disabled>确认并保存配对</button>
+</section>
+<section aria-live="polite" aria-atomic="true"><p id="message" role="status">正在读取本机配对状态…</p><pre id="status-details" hidden></pre>
+<button id="check" type="button" hidden>只读检查连接</button></section>
+<footer>只读检查包含 MQTT 状态／版本与 FTPS 登录／NOOP，不上传模型、不移动或加热、不启动打印。配对后 AI 可使用本机已配对接口；文件接收和实际启动回执仍需另外核验。</footer>
+</main><script src="/printer-setup.js" defer></script></body></html>

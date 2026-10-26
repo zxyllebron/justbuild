@@ -1,0 +1,104 @@
+{
+  "schema_version": "0.1",
+  "date": "2026-10-26",
+  "software_version": "0.1.0",
+  "feature": "Chinese easy terminal entry",
+  "entrypoints": [
+    "justbuild (no arguments)",
+    "justbuild easy",
+    "justbuild /absolute/path/board.step",
+    "project ./justbuild"
+  ],
+  "installed_user_launcher": true,
+  "unrelated_command_overwritten": false,
+  "existing_review_service_reloaded_with_no_active_jobs": true,
+  "regression": {
+    "passed": 240,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 4.99,
+    "scope": [
+      "easy",
+      "easy_service",
+      "portability_cli",
+      "intake",
+      "intake_claims",
+      "workflow",
+      "printer_setup"
+    ],
+    "warnings": "One existing Starlette TestClient/httpx deprecation warning"
+  },
+  "pty_smoke": {
+    "launched_from_outside_project": true,
+    "virtualenv_activation_required": false,
+    "menu_displayed": true,
+    "existing_design_listed": true,
+    "real_v821_first": true,
+    "review_link_returned": true,
+    "exited_cleanly": true,
+    "browser_open_option_disabled_for_test": true
+  },
+  "runtime_smoke": {
+    "date": "2026-10-26",
+    "cold_start": {
+      "real_server_started": true,
+      "compatible_server_reused": true,
+      "spawn_count": 1,
+      "log_mode": "0600",
+      "only_loopback": true,
+      "no_printer_or_model_requests": true
+    },
+    "new_intake": {
+      "job_id": "f05d2ad0b1074e609d8ecf2048ba6722",
+      "real_step_read": true,
+      "requirements_preserved": true,
+      "state": "awaiting_confirmation",
+      "constraints_confirmed": false,
+      "management_link_issued": true,
+      "link_http_verified": true,
+      "generation_started": false,
+      "slicing_started": false,
+      "print_started": false,
+      "input_is_synthetic_fixture": true,
+      "job_synthetic_flag": false
+    },
+    "real_v821_job_bytes_unchanged": true,
+    "browser_launch_performed": false,
+    "hardware_requests_performed": false
+  },
+  "workspace_endpoint": {
+    "route": "GET /api/local/workspace",
+    "strict_direct_loopback_only": true,
+    "role": "discover actual running service data directory; read-only"
+  },
+  "existing_v821_unchanged": true,
+  "old_print_hold_unchanged": true,
+  "printer_upload_or_start_performed": false,
+  "printer_account_or_firmware_modified": false,
+  "files_added": [
+    "justbuild",
+    "src/justbuild/easy.py",
+    "src/justbuild/easy_service.py",
+    "tests/integration/test_easy.py",
+    "tests/integration/test_easy_service.py",
+    "docs/easy-use.md",
+    "docs/easy-service.md",
+    "docs/easy-evidence-20261026.json"
+  ],
+  "files_changed": [
+    "src/justbuild/cli.py",
+    "src/justbuild/server.py",
+    "scripts/bootstrap.sh",
+    "scripts/package_release.py",
+    "README.md",
+    "docs/architecture.md",
+    "tasks/integration-status.md"
+  ],
+  "limits": [
+    "Full arbitrary-board natural-language semantic planning/repair loop remains unintegrated.",
+    "New intake stops at an unconfirmed proposal, not an automatically approved enclosure.",
+    "Browser request is optional; actual desktop browser launch was disabled during terminal smoke.",
+    "First installation on a clean machine, Windows/macOS cold start and public cloud multi-user hosting remain unverified.",
+    "A1 cloud dispatch and first actual upload/start/physical fit remain unverified."
+  ]
+}

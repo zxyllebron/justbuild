@@ -1,0 +1,32 @@
+{
+  "schema_version": "0.1",
+  "recorded_date": "2026-10-26",
+  "scope": "Observed runtime metadata; not a complete lockfile or clean-machine installation result",
+  "runtime": {
+    "python": "3.12.3",
+    "implementation": "CPython",
+    "system": "Linux",
+    "machine": "x86_64",
+    "venv_inherits_system_site_packages": true
+  },
+  "packages": {
+    "justbuild": "0.1.0",
+    "cadquery": "2.6.1",
+    "cadquery-ocp": "7.8.1.1.post1",
+    "fastapi": "0.141.1",
+    "uvicorn": "0.52.3",
+    "httpx": "0.28.1",
+    "python-multipart": "0.0.32",
+    "paho-mqtt": "2.1.0",
+    "numpy": "2.5.4"
+  },
+  "complete_dependency_lock_verified": false,
+  "clean_install_verified": false,
+  "cross_machine_verified": false,
+  "docker_build_verified": false,
+  "notes": [
+    "Current virtualenv includes some external system/site distributions. Do not redistribute it as a portable environment.",
+    "Project declares Python>=3.11; this observed complete package combination was only exercised with Python3.12.3.",
+    "A matching package version inventory does not prove native ABI or geometric/physical acceptance."
+  ]
+}

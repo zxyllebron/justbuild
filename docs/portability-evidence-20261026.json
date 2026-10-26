@@ -1,0 +1,153 @@
+{
+  "schema_version": "0.1",
+  "date": "2026-10-26",
+  "software_version": "0.1.0",
+  "current_product_form": [
+    "Python package",
+    "CLI",
+    "HTTP API",
+    "browser review"
+  ],
+  "skill_packaged": false,
+  "new_commands": {
+    "doctor": "offline metadata/files inventory only",
+    "self-test --out DIR": "actual synthetic CAD generation, independent verification and fresh STEP measurements; no slicing/model/network/printing"
+  },
+  "targeted_regression": {
+    "passed": 62,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 6.46,
+    "warning": "One Starlette TestClient deprecation warning",
+    "files": [
+      "tests/integration/test_diagnostics.py",
+      "tests/integration/test_selfcheck.py",
+      "tests/integration/test_portability_cli.py",
+      "tests/integration/test_workflow.py"
+    ]
+  },
+  "doctor_core_status": "ok",
+  "doctor_optional_slicer_in_current_cli_env": "needs_input",
+  "offline_repeatability": {
+    "schema_version": "0.1",
+    "date": "2026-10-26",
+    "scope": "Two offline CLI runs on the same Linux workstation; not another-machine or physical acceptance",
+    "status": "pass",
+    "runs": [
+      {
+        "verdict": "pass",
+        "semantic_geometry_sha256": "91a86a0a841b595403eb58e96f9d6a4a0f46d27c2a4b51906460559239cdbe75",
+        "required_check_count": 38,
+        "independent_check_summary": {
+          "pass": 36,
+          "fail": 0,
+          "not_checked": 6,
+          "not_applicable": 2
+        },
+        "pcb_dimensions_mm": [
+          80.0,
+          55.0,
+          1.6
+        ],
+        "hole_axis_offsets_mm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "execution": {
+          "cad": "run",
+          "independent_verification": "run",
+          "slicing": "not_run",
+          "model_provider": "not_run",
+          "network": "not_run",
+          "printing": "not_run"
+        }
+      },
+      {
+        "verdict": "pass",
+        "semantic_geometry_sha256": "91a86a0a841b595403eb58e96f9d6a4a0f46d27c2a4b51906460559239cdbe75",
+        "required_check_count": 38,
+        "independent_check_summary": {
+          "pass": 36,
+          "fail": 0,
+          "not_checked": 6,
+          "not_applicable": 2
+        },
+        "pcb_dimensions_mm": [
+          80.0,
+          55.0,
+          1.6
+        ],
+        "hole_axis_offsets_mm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "execution": {
+          "cad": "run",
+          "independent_verification": "run",
+          "slicing": "not_run",
+          "model_provider": "not_run",
+          "network": "not_run",
+          "printing": "not_run"
+        }
+      }
+    ],
+    "same_semantic_geometry": true,
+    "nonempty_output_refused": true,
+    "existing_report_preserved": true,
+    "clean_install_verified": false,
+    "cross_machine_verified": false,
+    "physical_print_or_fit_verified": false
+  },
+  "wheel_smoke": {
+    "wheel_module_loaded": true,
+    "core_inventory": "ok",
+    "http_health": 200,
+    "index": 200,
+    "js_css_asset_count": 19,
+    "pairing_assets_hidden_when_disabled": true,
+    "browser_render_tested": false,
+    "fresh_dependency_install_tested": false,
+    "wheel_sha256": "0f8562440577d898f714ec4e0e8d627a385490e3d1129af38d44485ec065a566",
+    "wheel_bytes": 671391
+  },
+  "runtime_inventory": "reference-runtime-20261026.json",
+  "lan_current_evidence": "lan-connection-evidence-20261026.json",
+  "limits": {
+    "complete_dependency_lock_verified": false,
+    "clean_machine_install_verified": false,
+    "cross_machine_same_geometry_verified": false,
+    "docker_build_verified": false,
+    "generic_natural_language_design_loop_integrated": false,
+    "cloud_dispatch_verified": false,
+    "physical_print_or_fit_verified": false
+  },
+  "files_added": [
+    "src/justbuild/diagnostics.py",
+    "src/justbuild/selfcheck.py",
+    "tests/integration/test_diagnostics.py",
+    "tests/integration/test_selfcheck.py",
+    "tests/integration/test_portability_cli.py",
+    "docs/portable-use.md",
+    "docs/doctor.md",
+    "docs/selfcheck.md",
+    "docs/reference-runtime-20261026.json",
+    "docs/lan-connection-evidence-20261026.json",
+    "docs/portability-evidence-20261026.json"
+  ],
+  "existing_real_v821_artifacts_modified": false,
+  "print_hold_changed": false,
+  "printer_upload_or_start_performed": false,
+  "lan_current_summary": {
+    "connection_verified": true,
+    "ready_for_new_print": true,
+    "state": "FINISH",
+    "mqtt_authenticated": true,
+    "ftps_authenticated": true,
+    "certificate_pins_verified": true,
+    "print_start_performed": false
+  }
+}

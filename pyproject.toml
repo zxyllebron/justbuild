@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=77", "packaging>=24.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "justbuild"
+version = "0.1.0"
+description = "Headless, constraint-aware PCB enclosure generation and review"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["cadquery==2.6.1", "fastapi>=0.115,<1", "uvicorn>=0.30,<1", "python-multipart>=0.0.20,<1", "httpx>=0.27,<1"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+lan = ["paho-mqtt>=2.1,<3"]
+
+[project.scripts]
+justbuild = "justbuild.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+justbuild = ["web/*", "web/vendor/*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+

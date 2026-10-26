@@ -1,0 +1,113 @@
+{
+  "schema_version": "0.1",
+  "at": "2026-10-24T10:26:44.935919+00:00",
+  "job_id": "019d8f0d6d92426aa96618210deb469a",
+  "software_regression": {
+    "passed": 699,
+    "skipped": 9,
+    "warnings": 1,
+    "seconds": 61.6,
+    "log": "docs/update-20261024-test-results.txt",
+    "skipped_scope": "8 Windows-runtime conditions; 1 unconfigured real CLI test"
+  },
+  "review_model": {
+    "sha256": "029f95ad83f20dbb2d1a1b54ecff7a63c3a09524e071f9911fa160b1b73dcf83",
+    "bytes_before": 43367816,
+    "bytes_after": 10713216,
+    "primitives_before": 64840,
+    "primitives_after": 545,
+    "source_triangles_preserved": 384357,
+    "source_components_preserved": 543,
+    "lossless": true
+  },
+  "web": {
+    "full_detail_restored_when_idle": true,
+    "event_driven_rendering": true,
+    "measurements_from": "CAD metadata and confirmed source hole/board constraints",
+    "screenshot": "dist/justbuild-v821-web-measurements.png",
+    "narrow_browser_smoke": {
+      "meshes": 545,
+      "full_frame_ms": 94,
+      "model_load_warm_ms": 81,
+      "canvas_px": [
+        305,
+        424
+      ],
+      "quality": "full",
+      "resolution_scale": 1
+    },
+    "performance_note": "warm narrow browser observations, not sustained full-detail FPS"
+  },
+  "intake": {
+    "step_and_requirements_separated": true,
+    "new_local_jobs_one_time_owner_fragment": true,
+    "share_is_read_only": true,
+    "legacy_real_job_owner": null
+  },
+  "printing": {
+    "studio_login_required_for_lan": false,
+    "lan_adapter": "developer_lan_compatibility_prototype",
+    "private_profile_present": false,
+    "real_device_identity_verified": false,
+    "upload_performed": false,
+    "start_command_sent": false,
+    "cloud_dispatch_verified": false,
+    "print_hold": true,
+    "sliced_artifact_sha256": "91d91dfbd8e6f2e95687e883589bb793c552e33c1cf0b2d36320a38b2ed6083b",
+    "requirements_for_actual_device": "one-time local pairing and network reachability"
+  },
+  "controller_sha256": "0b9412848fa5d4b53d5308661d1b7e521c4eaf5dec94e28fc99a2f0142bcc1d3",
+  "web_assets": [
+    {
+      "path": "src/justbuild/web/app.js",
+      "bytes": 26351,
+      "sha256": "898cc10dc1979f4b0c2b312021e9ff80586909f5b39860e55d469aecae920754"
+    },
+    {
+      "path": "src/justbuild/web/index.html",
+      "bytes": 6215,
+      "sha256": "b01c44f63d3d72a20adc0e1357cd49f2005005ef0711b75e38f417aad8a422f2"
+    },
+    {
+      "path": "src/justbuild/web/style.css",
+      "bytes": 12058,
+      "sha256": "fe08a4db10328f358a383a125030eb4aa4921279aa3de1b3aa9c9d59cf4ace53"
+    },
+    {
+      "path": "src/justbuild/web/dimension-review.js",
+      "bytes": 16869,
+      "sha256": "ab48d2b71dbc51a9323eb0937610803ec5c1f743fd25843325371750b4ec81db"
+    },
+    {
+      "path": "src/justbuild/web/dimension-review.css",
+      "bytes": 1494,
+      "sha256": "c4df66b6eb57af04ca6b3a93d1caadd604d3d61a187382babcd21d064ad5a81c"
+    },
+    {
+      "path": "src/justbuild/web/software-renderer.js",
+      "bytes": 20861,
+      "sha256": "fa88bc8239046918a7af43feb2f9d0fa8e1e59248b86b3ec0c48527f7cacfcac"
+    },
+    {
+      "path": "src/justbuild/web/software-rasterizer.js",
+      "bytes": 4219,
+      "sha256": "b7307ac98d6575ce2822d44d2004cb7daf8c917e4cd569f718ca58cbc68653b5"
+    },
+    {
+      "path": "src/justbuild/web/intake-claim.js",
+      "bytes": 1348,
+      "sha256": "3ae5649fa4401fc5ebe78125c6a417e687f9a9907f1368e11d346c93cdd1e111"
+    },
+    {
+      "path": "src/justbuild/web/print-review.js",
+      "bytes": 20877,
+      "sha256": "caa2ee23f28e23de10a86e7eb0096f0719f89ea63df438f6769797120ed54ecc"
+    },
+    {
+      "path": "src/justbuild/web/print-review.css",
+      "bytes": 4473,
+      "sha256": "ff18b8828629d3a95c9cc33adb5b5e7f55af024fdaa736de2bb85cf409a0c9f3"
+    }
+  ],
+  "subsequent_connection_evidence": "docs/lan-connection-evidence-20261024.json"
+}

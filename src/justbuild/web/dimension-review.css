@@ -1,0 +1,12 @@
+/* SVG annotations stay independent of model tessellation and software rendering. */
+.dimension-review { position:absolute; inset:0; z-index:6; pointer-events:none; overflow:hidden; color:#e3fbff; }
+.dimension-review[hidden] { display:none; }
+.dimension-svg { display:block; width:100%; height:100%; overflow:hidden; }
+.dimension-line,.dimension-cap { stroke:#7de9d0; stroke-width:1.35; vector-effect:non-scaling-stroke; }
+.dimension-extension { stroke:#7de9d0; stroke-width:1; stroke-opacity:.52; vector-effect:non-scaling-stroke; }
+.dimension-leader { stroke:#92e6d7; stroke-width:1; stroke-opacity:.62; stroke-dasharray:3 3; vector-effect:non-scaling-stroke; }
+.dimension-label-bg { fill:#112b32; fill-opacity:.95; stroke:#76bdb0; stroke-opacity:.65; stroke-width:1; }
+.dimension-label { fill:#e9fff8; font:600 12px ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; font-variant-numeric:tabular-nums; }
+.dimension-caption { position:absolute; bottom:12px; left:50%; transform:translateX(-50%); max-width:calc(100% - 20px); box-sizing:border-box; padding:6px 11px; border:1px solid #78b7a84d; border-radius:20px; background:#10272de6; color:#b7d8ce; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size:11px; line-height:16px; letter-spacing:.01em; }
+@media (max-width:480px) { .dimension-label { font-size:11px; } .dimension-caption { bottom:10px; font-size:10px; } }
+@media (prefers-reduced-motion:reduce) { .dimension-review * { transition:none!important; } }

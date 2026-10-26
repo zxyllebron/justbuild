@@ -1,0 +1,106 @@
+{
+  "schema_version": "0.1",
+  "at": "2026-10-24T09:34:23.776611+00:00",
+  "job_id": "019d8f0d6d92426aa96618210deb469a",
+  "source_sha256": "2b096e5a608d7089dbc6062cfb4fd410af0d810e17436928e0bbb47b45dd51cc",
+  "cad_status": "ok",
+  "independent_verification": {
+    "status": "ok",
+    "verdict": "pass",
+    "summary": {
+      "pass": 674,
+      "fail": 0,
+      "not_checked": 11,
+      "not_applicable": 3
+    },
+    "required_not_checked": [],
+    "report_sha256": "eb16f3b9b6d958d09132419bd605c84421a9e92d56ea1c65e9c64eb6e8e4c209",
+    "raw_report_sha256": "6c6e2efe383a33d50bff58433d201aab041f7e7062e00c320c99f2ca03d333ab"
+  },
+  "printing_started": false,
+  "regression": {
+    "passed": 359,
+    "skipped": 9,
+    "warnings": 1,
+    "seconds": 48.69,
+    "scope": "full final software suite; 8 Windows runtime checks and 1 explicit real CLI opt-in skipped; actual real-board CLI slicing separately executed"
+  },
+  "actual_slice": {
+    "status": "ok",
+    "simulation": false,
+    "sha256": "91d91dfbd8e6f2e95687e883589bb793c552e33c1cf0b2d36320a38b2ed6083b",
+    "bytes": 633265,
+    "slicer": {
+      "adapter": "bambu_studio_cli",
+      "version": "02.08.02.61",
+      "executable_sha256": "d267ad0b4589c46cb18f49e2414f87a529b446dc992cb6ab8a728fe43f549eb8",
+      "inspection": {
+        "method": "ZIP CRC and nonempty plate G-code members",
+        "gcode_members": [
+          "Metadata/plate_1.gcode"
+        ],
+        "preview_images_available": false,
+        "toolpath_safety": "not_checked",
+        "units": "mm",
+        "effective_settings": {
+          "printer_model": "Bambu Lab A1",
+          "printer_settings_id": "Bambu Lab A1 0.4 nozzle",
+          "print_settings_id": "0.20mm Standard @BBL A1",
+          "filament_settings_id": [
+            "Bambu PLA Basic @BBL A1"
+          ],
+          "filament_type": [
+            "PLA"
+          ],
+          "nozzle_diameter": [
+            "0.4"
+          ],
+          "curr_bed_type": "Textured PEI Plate"
+        }
+      },
+      "orientation": "input mesh orientation; automatic orientation disabled"
+    },
+    "settings": {
+      "nozzle_diameter_mm": 0.4,
+      "material": "PLA",
+      "bed_type": "Textured PEI Plate",
+      "profiles": {
+        "machine": {
+          "id": "Bambu Lab A1 0.4 nozzle",
+          "sha256": "6d78628cb77e93bbd892bc7de33e3021248dfd9fdf2bef6060bc335b57f5c23c"
+        },
+        "process": {
+          "id": "0.20mm Standard @BBL A1",
+          "sha256": "5dc035974c06e0f6a9f4732081d6d347b822df985eb5de2b01e874a83d07dd7a"
+        },
+        "filament": {
+          "id": "Bambu PLA Basic @BBL A1",
+          "sha256": "f73cf115b269f788497c249e4ab15d807558969c36c97ac7877a5ae72e598f3c"
+        }
+      }
+    }
+  },
+  "user_reports_linux_studio_logged_in": true,
+  "cloud_dispatch_verified": false,
+  "previous_regression": {
+    "passed": 288,
+    "skipped": 7,
+    "warnings": 1,
+    "seconds": 49.55,
+    "scope": "all current tests; Windows runtime and explicit real CLI opt-in skipped"
+  },
+  "linux_receiver": {
+    "implementation": "complete",
+    "unit_tests": 27,
+    "protocol_installer_tests": 30,
+    "cli_help_verified": true,
+    "protocol_installed": false,
+    "studio_import_observed": false
+  },
+  "mesh_inspection_sha256": "b9c24267d89781315655b99fb00c51b509c1899dfc25e06825d8c8e8a610ec1c",
+  "http_3mf_download": {
+    "bytes": 633265,
+    "sha256_matches": true
+  },
+  "verification_distance_cache_note": "formal real-board report was completed before equivalent distance-cache optimization; subsequent full software suite passed; no repeated full-board run claimed"
+}

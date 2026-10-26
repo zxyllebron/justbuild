@@ -1,0 +1,53 @@
+{
+  "job_id": "95296a77728c46f798ac91d1cffbb8aa",
+  "delivery": "review prototype delivered before full independent check completes",
+  "request_sha256": "f9a2d86dd02277ce6af4cc131821f047bb16ca2567109add205952b371ac4cdc",
+  "cad_result": "data/jobs/95296a77728c46f798ac91d1cffbb8aa/generating/cad-preserved-5bfty5d_/cad_result.json",
+  "source_solids": 543,
+  "cad_local_checks": {
+    "pass": 620,
+    "fail": 0,
+    "not_checked": 4
+  },
+  "prototype_zip_sha256": "567558531975f9ef5e80c4ae4aa388a6e73a33f00c9291f7d348c8d39163d8a0",
+  "prototype_zip_bytes": 421915,
+  "body_size_mm": [
+    115,
+    75,
+    19.796157072313
+  ],
+  "with_ears_size_mm": [
+    115,
+    87,
+    19.796157072313
+  ],
+  "screen_mm": [
+    110,
+    70,
+    3.2
+  ],
+  "prototype_estimates": {
+    "ledge_width_mm": 1,
+    "face_opening_mm": [
+      108,
+      68
+    ],
+    "ribbon_channel_mm": [
+      40,
+      2
+    ]
+  },
+  "regression": {
+    "main_integration_passed": 94,
+    "cad_passed": 97,
+    "verification_passed": 120,
+    "printing_passed": 124,
+    "printing_skipped": 1
+  },
+  "browser_model_ready": true,
+  "download_HTTP_hash_and_ZIP_CRC_verified": true,
+  "independent_state_at_delivery": "verifying",
+  "independent_status_file": "/home/wujie/.local/state/justbuild/review-runs/20261026-95296a/status.json",
+  "print_hold": true,
+  "printer_actions": false
+}

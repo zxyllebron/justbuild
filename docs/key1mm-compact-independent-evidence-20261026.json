@@ -1,0 +1,20 @@
+{
+  "job_id": "2845532654514a1398cc246d804c3fbb",
+  "state": "review_incomplete",
+  "finished_at": "2026-10-26T09:10:15.413194+00:00",
+  "verdict": "incomplete",
+  "check_summary": {
+    "pass": 1886,
+    "fail": 0,
+    "not_checked": 13,
+    "not_applicable": 3
+  },
+  "required_not_checked": [
+    "display_active_area",
+    "display_ribbon_bend"
+  ],
+  "report_path": "/media/wujie/T9/justbuild/data/jobs/2845532654514a1398cc246d804c3fbb/verifying/verification.json",
+  "report_sha256": "5f39897338efe1a9b534d7d299c697df87251dae99f5f0ab28cf78c6da1b2508",
+  "no_printer_actions": true,
+  "print_hold": true
+}

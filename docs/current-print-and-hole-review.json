@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-24T08:22:17.466179+00:00",
+  "job_id": "a220edffbf6a4c8eaa813616761bf1a7",
+  "input": "synthetic STEP, not V821 source STEP",
+  "mounting_axes": [
+    {
+      "id": "mount-1",
+      "center_mm": [
+        5.0,
+        5.0,
+        0.8
+      ],
+      "status": "pass",
+      "axis_offset_mm": 0.0,
+      "board_diameter_mm": 3.0,
+      "base_pilot_diameter_mm": 2.0,
+      "tolerance_mm": 0.001
+    },
+    {
+      "id": "mount-2",
+      "center_mm": [
+        75.0,
+        5.0,
+        0.8
+      ],
+      "status": "pass",
+      "axis_offset_mm": 0.0,
+      "board_diameter_mm": 3.0,
+      "base_pilot_diameter_mm": 2.0,
+      "tolerance_mm": 0.001
+    },
+    {
+      "id": "mount-3",
+      "center_mm": [
+        5.0,
+        50.0,
+        0.8
+      ],
+      "status": "pass",
+      "axis_offset_mm": 0.0,
+      "board_diameter_mm": 3.0,
+      "base_pilot_diameter_mm": 2.0,
+      "tolerance_mm": 0.001
+    },
+    {
+      "id": "mount-4",
+      "center_mm": [
+        75.0,
+        50.0,
+        0.8
+      ],
+      "status": "pass",
+      "axis_offset_mm": 0.0,
+      "board_diameter_mm": 3.0,
+      "base_pilot_diameter_mm": 2.0,
+      "tolerance_mm": 0.001
+    }
+  ],
+  "sliced_sha256": "f178cba3379e7b9dd3e6be9b15f2225cd60f3c7590cf2745855462a42fc8e1bc",
+  "user_authorized_current_print": true,
+  "print_command_sent": false,
+  "printer_receipt_verified": false,
+  "printer_start_verified": false,
+  "blockers": [
+    "No confirmed device identity and authenticated live connection",
+    "No real LAN/cloud transport integrated; HTTP print entry remains explicit 501"
+  ],
+  "discovery": "One same-hotspot candidate has TCP 8883, 990, 6000 reachable; this is not device authentication or a printer status check",
+  "official_component_probe": "Library loaded and config dir accepted; unauthenticated initial state returned false; standalone probe crashed on teardown, so it does not establish a valid official session",
+  "ui_changes": [
+    "PCB/lid hole classification and colored labels",
+    "hole view and source/coordinate/axis-deviation table"
+  ],
+  "checks_this_update": [
+    "JavaScript syntax checks",
+    "configuration helper Python compilation",
+    "browser annotation/geometry review",
+    "sliced artifact hash unchanged"
+  ],
+  "superseded": true,
+  "superseded_by_job_id": "019d8f0d6d92426aa96618210deb469a",
+  "superseded_reason": "User supplied real V821 STEP; synthetic design is not a V821 fitting and remains held from printing",
+  "current_evidence": "v821-release-evidence.json"
+}

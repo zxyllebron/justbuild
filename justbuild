@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# justbuild-source-launcher-v1: one local entry, no CAD desktop or printer action.
+set -euo pipefail
+JUSTBUILD_PROJECT_ROOT="$(CDPATH= cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+JUSTBUILD_RUNTIME="${JUSTBUILD_VENV:-$HOME/.cache/justbuild/venv}"
+if [ ! -x "$JUSTBUILD_RUNTIME/bin/python" ]; then
+  printf '首次使用，正在安装无界面运行环境…\n'
+  bash "$JUSTBUILD_PROJECT_ROOT/scripts/bootstrap.sh"
+fi
+export PYTHONPATH="$JUSTBUILD_PROJECT_ROOT/src${PYTHONPATH:+:$PYTHONPATH}"
+export JUSTBUILD_EASY_DATA_DIR="${JUSTBUILD_EASY_DATA_DIR:-$JUSTBUILD_PROJECT_ROOT/data/jobs}"
+exec "$JUSTBUILD_RUNTIME/bin/python" -m justbuild "$@"

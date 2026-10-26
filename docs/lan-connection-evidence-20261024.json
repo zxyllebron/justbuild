@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1",
+  "observed_at": "2026-10-24T11:26:43.296676+00:00",
+  "transport": "direct_developer_lan",
+  "target_host": "172.20.10.10",
+  "model": "Bambu Lab A1",
+  "firmware": "01.08.01.00",
+  "connection_verified": true,
+  "ready_for_new_print": false,
+  "mqtt_authenticated": true,
+  "ftps_authenticated": true,
+  "certificate_pins_verified": true,
+  "identity_verified": true,
+  "firmware_matches": true,
+  "printer_state": "RUNNING",
+  "progress_percent": 97,
+  "profile_permissions": "0o600",
+  "studio_session_used": false,
+  "credentials_in_evidence": false,
+  "upload_performed": false,
+  "print_command_sent": false,
+  "existing_job_interrupted": false,
+  "dispatch_verified": false,
+  "cloud_dispatch_verified": false,
+  "issue_codes": [
+    "LAN_NOT_IDLE"
+  ]
+}
